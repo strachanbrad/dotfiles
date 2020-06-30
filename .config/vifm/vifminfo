@@ -1,0 +1,640 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'H
+	/home/bradly/
+	..
+1592270846
+'b
+	/home/bradly/bin/
+	..
+1592314627
+'h
+	/home/bradly/
+	..
+1592314627
+
+# Bookmarks:
+
+# TUI:
+al
+q0
+v2
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/etc/xdg/awesome
+	..
+0
+d/etc/xdg
+	awesome
+2
+d/etc/xdg/awesome
+	..
+0
+d/etc/xdg
+	awesome
+2
+d/etc
+	xdg
+15
+d/etc/xdg
+	awesome
+2
+d/etc/xdg/awesome
+	..
+0
+d/etc/xdg
+	picom.conf.example
+5
+d/etc
+	xdg
+15
+d/etc/xdg
+	picom.conf.example
+5
+d/home/bradly
+	.config
+2
+d/home/bradly/.config
+	vifm
+15
+d/home/bradly/.config/vifm
+	colors
+1
+d/home/bradly/.config/vifm/colors
+	gruvbox.vifm
+12
+d/home/bradly/.config/vifm
+	colors
+1
+d/home/bradly/.config
+	alacritty
+3
+d/home/bradly/.config/alacritty
+	alacritty.yml
+1
+d/home/bradly/.config
+	alacritty
+3
+d/home/bradly
+	Downloads
+16
+d/home/bradly/Downloads
+	..
+0
+d/home/bradly
+	Downloads
+16
+d/home
+	bradly
+1
+d/
+	usr
+17
+d/usr
+	share
+8
+d/usr/share
+	awesome
+17
+d/usr/share/awesome
+	themes
+3
+d/usr/share/awesome/themes
+	default
+1
+d/usr/share/awesome/themes/default
+	submenu.png
+7
+d/home/bradly
+	.config
+2
+d/home/bradly/.config
+	awesome
+4
+d/home/bradly/.config/awesome
+	rc.lua
+2
+d/home/bradly/.config
+	awesome
+4
+d/home/bradly
+	.config
+2
+d/home
+	bradly
+1
+d/
+	mnt
+8
+d/mnt
+	..
+0
+d/
+	etc
+3
+d/etc
+	wpa_supplicant
+14
+d/etc/wpa_supplicant
+	wpa_supplicant.conf
+2
+d/home/bradly
+	.config
+2
+d/home/bradly/.config
+	oh-my-zsh
+14
+d/home/bradly
+	.bash_logout
+24
+d/home
+	bradly
+1
+d/home/bradly
+	.config
+2
+d/home/bradly/.config
+	oh-my-zsh
+14
+d/home/bradly/.config/oh-my-zsh
+	CONTRIBUTING.md
+14
+d/home/bradly/.config
+	neofetch
+11
+d/home/bradly
+	.cache
+1
+d/home/bradly/.cache
+	zsh
+14
+d/home/bradly
+	.config
+2
+d/home/bradly/.config
+	oh-my-zsh
+14
+d/home/bradly/.config/oh-my-zsh
+	cache
+3
+d/home/bradly/.config/oh-my-zsh/cache
+	.zsh-update
+2
+d/home/bradly/.config/oh-my-zsh
+	cache
+3
+d/home/bradly/.config/oh-my-zsh/cache
+	.zsh-update
+2
+d/home/bradly/.config/oh-my-zsh
+	cache
+3
+d/home/bradly/.config
+	dconf
+6
+d/home/bradly
+	.cache
+1
+d/home/bradly/.cache
+	zsh
+14
+d/home/bradly/.cache/zsh
+	..
+0
+d/home/bradly/.cache
+	zsh
+14
+d/home/bradly
+	.config
+2
+d/home/bradly/.config
+	oh-my-zsh
+14
+d/home/bradly/.config/oh-my-zsh
+	oh-my-zsh.sh
+17
+d/home/bradly/.config
+	gtk-3.0
+8
+d/home/bradly
+	.config
+2
+d/home/bradly/.config
+	oh-my-zsh
+14
+d/home/bradly/.config/oh-my-zsh
+	cache
+3
+d/home/bradly/.config/oh-my-zsh/cache
+	.zsh-update
+2
+d/home/bradly/.config/oh-my-zsh
+	oh-my-zsh.sh
+17
+d/home/bradly/.config
+	oh-my-zsh
+14
+d/home/bradly
+	.config
+2
+d/home/bradly/.config
+	oh-my-zsh
+14
+d/home/bradly/.config/oh-my-zsh
+	tools
+10
+d/home/bradly/.config/oh-my-zsh/tools
+	check_for_upgrade.sh
+1
+d/home/bradly/.config/oh-my-zsh
+	plugins
+7
+d/home/bradly/.config/oh-my-zsh/plugins
+	iterm2
+34
+d/home/bradly/.config/oh-my-zsh
+	templates
+8
+d/home/bradly/.config
+	zsh
+22
+d/home/bradly/.config/zsh
+	..
+0
+d/home/bradly/.config
+	zsh
+22
+d/home/bradly
+	.config
+2
+d/home/bradly/.config
+	zsh
+22
+d/home/bradly/.config/zsh
+	..
+0
+d/home/bradly/.config
+	oh-my-zsh
+14
+d/home/bradly/.config/oh-my-zsh
+	templates
+8
+d/home/bradly/.config
+	oh-my-zsh
+14
+d/home/bradly
+	.config
+2
+d/home/bradly/.config
+	vlc
+19
+d/home/bradly
+	.config
+2
+d/home/bradly/.config
+	oh-my-zsh
+14
+d/home/bradly/.config/oh-my-zsh
+	LICENSE.txt
+15
+d/home/bradly/.config
+	oh-my-zsh
+14
+d/home/bradly
+	.cache
+1
+d/home/bradly/.cache
+	zsh
+14
+d/home/bradly/.cache/zsh
+	..
+0
+d/home/bradly/.cache
+	zsh
+14
+d/home/bradly/.cache/zsh
+	..
+0
+d/home/bradly/.cache
+	zsh
+14
+d/home/bradly
+	.zshrc
+33
+d
+
+# Right window history (oldest to newest):
+D/home/bradly
+	Public
+7
+D/etc
+	gimp
+23
+D/
+	usr
+17
+D/usr
+	share
+8
+D/usr/share
+	awesome
+17
+D/usr/share/awesome
+	lib
+2
+D/usr/share/awesome/lib
+	..
+0
+D/usr/share/awesome
+	themes
+3
+D/usr/share/awesome/themes
+	..
+0
+D/usr/share/awesome
+	icons
+1
+D/usr/share/awesome/icons
+	..
+0
+D/usr/share/awesome
+	icons
+1
+D/usr/share
+	awesome
+17
+D/usr
+	local
+6
+D/usr/local
+	share
+8
+D/usr/local/share
+	..
+0
+D/usr/local
+	share
+8
+D/usr
+	local
+6
+D/
+	etc
+3
+D/etc
+	pacman.d
+12
+D/
+	usr
+17
+D/usr
+	local
+6
+D/usr/local
+	etc
+2
+D/usr/local/etc
+	..
+0
+D/usr/local
+	share
+8
+D/usr
+	share
+8
+D/usr/share
+	awesome
+17
+D/usr/share/awesome
+	lib
+2
+D/usr/share/awesome/lib
+	awful
+1
+D/usr/share/awesome
+	lib
+2
+D/usr/share
+	..
+0
+D/usr
+	lib64
+5
+D/
+	etc
+3
+D/etc
+	xdg
+32
+D/etc/xdg
+	awesome
+2
+D/etc/xdg/awesome
+	rc.lua
+1
+D/etc/xdg
+	awesome
+2
+D/etc
+	xdg
+32
+D/etc/xdg
+	awesome
+2
+D/etc/xdg/awesome
+	rc.lua
+1
+D/etc/xdg
+	awesome
+2
+D/home/bradly
+	Public
+7
+D/home/bradly/Public
+	..
+0
+D/home/bradly
+	.config
+2
+D/home/bradly/.config
+	awesome
+4
+D/home/bradly/.config/awesome
+	theme
+1
+D/home/bradly/.config/awesome/theme
+	wallpapers
+1
+D/home/bradly/.config/awesome/theme/wallpapers
+	..
+0
+D/home/bradly/.config/awesome/theme
+	wallpapers
+1
+D/home/bradly/.config/awesome/theme/wallpapers
+	wall.png
+1
+D/home/bradly/.config/awesome/theme
+	..
+0
+D/home/bradly/.config/awesome
+	themes
+1
+D/home/bradly/.config/awesome/themes
+	gruvbox.lua
+2
+D/home/bradly/.config/awesome
+	themes
+1
+D/home/bradly/.config/awesome/themes
+	gruvbox.lua
+2
+D/home/bradly/.config/awesome
+	themes
+1
+D/home/bradly/.config
+	dconf
+6
+D/home/bradly
+	.config
+2
+D/home
+	bradly
+1
+D/
+	home
+4
+D/home
+	bradly
+1
+D/home/bradly
+	Git-Clones
+17
+D/home/bradly/Git-Clones
+	the-glorious-dotfiles
+1
+D/home/bradly/Git-Clones/the-glorious-dotfiles
+	config
+6
+D/home/bradly/Git-Clones/the-glorious-dotfiles/config
+	awesome
+2
+D/home/bradly/Git-Clones/the-glorious-dotfiles/config/awesome
+	floppy
+1
+D/home/bradly/Git-Clones/the-glorious-dotfiles/config/awesome/floppy
+	configuration
+2
+D/home/bradly/Git-Clones/the-glorious-dotfiles/config/awesome/floppy/configuration
+	client
+1
+D/home/bradly/Git-Clones/the-glorious-dotfiles/config/awesome/floppy/configuration/client
+	rules.lua
+4
+D
+
+# Command line history (oldest to newest):
+:cd /
+:hidden
+:za
+:rm -rf
+:rm -rf $0
+:mkdir plugged
+:mkdir autoload
+:wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+:touch config
+:git clone https://github.com/vifm/vifm-colors ~/.config/vifm/colors
+:r
+:mkdir alacritty
+:touch alacritty.yml
+:cd /etc/
+:mkdir wallpapers
+:cd
+:mkdir
+:mkdir zsh
+:help
+:q
+
+# Search history (oldest to newest):
+/rofi
+/rc.lua
+/xd
+/xdg
+/wp
+
+# Prompt history (oldest to newest):
+prc.lua.floppy
+prc.lua
+prc.default.lua
+pthemes
+pgruvbox.lua
+poh-my-zsh
+
+# Local filter history (oldest to newest):
+
+# Registers:
+""/home/bradly/.local/share/vifm/Trash/005_.zcompdump-krachen-5.8
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+t/home/bradly/.local/share/vifm/Trash/000_kitty
+	/home/bradly/.config/kitty
+t/home/bradly/.local/share/vifm/Trash/000_colors
+	/home/bradly/.config/vifm/colors
+t/home/bradly/.local/share/vifm/Trash/000_binaries
+	/home/bradly/.config/awesome/binaries
+t/home/bradly/.local/share/vifm/Trash/000_configuration
+	/home/bradly/.config/awesome/configuration
+t/home/bradly/.local/share/vifm/Trash/000_layout
+	/home/bradly/.config/awesome/layout
+t/home/bradly/.local/share/vifm/Trash/000_library
+	/home/bradly/.config/awesome/library
+t/home/bradly/.local/share/vifm/Trash/000_module
+	/home/bradly/.config/awesome/module
+t/home/bradly/.local/share/vifm/Trash/000_theme
+	/home/bradly/.config/awesome/theme
+t/home/bradly/.local/share/vifm/Trash/000_widget
+	/home/bradly/.config/awesome/widget
+t/home/bradly/.local/share/vifm/Trash/000_rc.lua.floppy
+	/home/bradly/.config/awesome/rc.lua.floppy
+t/home/bradly/.local/share/vifm/Trash/000_README.md
+	/home/bradly/.config/awesome/README.md
+t/home/bradly/.local/share/vifm/Trash/000_freedesktop
+	/home/bradly/.config/awesome/freedesktop
+t/home/bradly/.local/share/vifm/Trash/000_lain
+	/home/bradly/.config/awesome/lain
+t/home/bradly/.local/share/vifm/Trash/000_scripts
+	/home/bradly/.config/awesome/scripts
+t/home/bradly/.local/share/vifm/Trash/000_themes
+	/home/bradly/.config/awesome/themes
+t/home/bradly/.local/share/vifm/Trash/000_dotfiles
+	/home/bradly/Git-Clones/dotfiles
+t/home/bradly/.local/share/vifm/Trash/000_yay
+	/home/bradly/Git-Clones/yay
+t/home/bradly/.local/share/vifm/Trash/000_gruvbox.lua
+	/home/bradly/.config/awesome/themes/gruvbox.lua
+t/home/bradly/.local/share/vifm/Trash/000_.oh-my-zsh
+	/home/bradly/.oh-my-zsh
+t/home/bradly/.local/share/vifm/Trash/000_.zcompdump-krachen-5.8
+	/home/bradly/.zcompdump-krachen-5.8
+t/home/bradly/.local/share/vifm/Trash/002_kitty
+	/home/bradly/.cache/kitty
+t/home/bradly/.local/share/vifm/Trash/000_oh-my-zsh
+	/home/bradly/.config/oh-my-zsh
+
+# State:
+f
+i1
+[.0
+[F
+F
+I1
+].0
+]F
+s0
