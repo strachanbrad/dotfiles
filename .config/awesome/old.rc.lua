@@ -3,23 +3,16 @@
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
 
--- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
-require("awful.autofocus")
--- Widget and layout library
 local wibox = require("wibox")
--- Theme handling library
 local beautiful = require("beautiful")
--- Notification library
 local naughty = require("naughty")
--- Declarative object management
 local ruled = require("ruled")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
--- Enable hotkeys help widget for VIM and other apps
--- when client with a matching name is opened:
-require("awful.hotkeys_popup.keys")
+
+require("awful.autofocus")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -61,7 +54,7 @@ tag.connect_signal("request::default_layouts", function()
 			awful.layout.suit.tile,
 			--awful.layout.suit.tile.left,
 			--awful.layout.suit.tile.bottom,
-			--awful.layout.suit.tile.top,
+			awful.layout.suit.tile.top,
 			--awful.layout.suit.fair,
 			--awful.layout.suit.fair.horizontal,
 			--awful.layout.suit.spiral,
@@ -73,11 +66,6 @@ tag.connect_signal("request::default_layouts", function()
 		})
 	end)
 	-- }}}
-
-	-- {{{ Wibar
-
-	-- Keyboard map indicator and switcher
-	mykeyboardlayout = awful.widget.keyboardlayout()
 
 	screen.connect_signal("request::wallpaper", function(s)
 		-- Wallpaper
@@ -91,22 +79,13 @@ tag.connect_signal("request::default_layouts", function()
 		end
 	end)
 
-	local mytaglist = require('widgets.taglist')
-
 	screen.connect_signal("request::desktop_decoration", function(s)
 		awful.tag({ "SYS", "WWW", "DEV", "DOC", "GFX"}, s, awful.layout.layouts[1])
 
-		s.mylayoutbox = awful.widget.layoutbox {
-			screen  = s,
-			buttons = {
-				awful.button({ }, 1, function () awful.layout.inc( 1) end),
-				awful.button({ }, 3, function () awful.layout.inc(-1) end),
-				awful.button({ }, 4, function () awful.layout.inc( 1) end),
-				awful.button({ }, 5, function () awful.layout.inc(-1) end),
-			}
-		}
+		local mytaglist = require('widgets.taglist')
+		local mylayoutbox = require('widgets.layoutbox')
+		local batwidget = require('widgets.battery')
 
-		-- Create the wibox
 		s.mywibox = awful.wibar { 
 			position = "top", 
 			screen = s, 
@@ -117,21 +96,13 @@ tag.connect_signal("request::default_layouts", function()
 				{
 					layout   = wibox.layout.fixed.horizontal,
 					spacing = beautiful.taglist_power_arrow_spacing,
-					{
-						s.mylayoutbox,
-						id = "background_role",
-						widget = wibox.container.background,
-						shape = function(cr, width, height) 
-							gears.shape.transform(gears.shape.rectangular_tag) : rotate_at(width/2,height/2, math.pi)(cr, width, height, height/2)
-						end
-					},
-					mytaglist(s)
+					mylayoutbox(s),
+					mytaglist(s),
 				},
 				{
 					layout = wibox.layout.fixed.horizontal,
 					{
 						wibox.widget.textclock(),
-						valign = 'center',
 						halign = 'center',
 						fill_horizontal = true,
 						widget = wibox.container.place
@@ -139,7 +110,18 @@ tag.connect_signal("request::default_layouts", function()
 				},
 				{
 					layout = wibox.layout.fixed.horizontal,
-					wibox.widget.systray(),
+					{
+						wibox.widget {
+							wibox.widget.systray(),
+							--batwidget,
+							layout = wibox.layout.fixed.horizontal,
+							spacing = beautiful.taglist_power_arrow_spacing
+						},
+						halign = 'right',
+						fill_horizontal = true,
+						fill_vertical = true,
+						widget = wibox.container.place
+					}
 				},
 				layout = wibox.layout.ratio.horizontal
 			}
@@ -390,6 +372,14 @@ tag.connect_signal("request::default_layouts", function()
 			client.connect_signal("manage", function (c)
 				c.shape = function (cr, w, h)
 					gears.shape.rounded_rect(cr, w, h, 5)
+				end
+				if not _G.awesome.startup then
+					awful.client.setslave(c)
+				end
+
+				if _G.awesome.startup and not c.size_hints.user_position and not c.size_hints.program_position then
+					-- Prevent clients from being unreachable after screen count changes.
+					awful.placement.no_offscreen(c)
 				end
 			end)
 
