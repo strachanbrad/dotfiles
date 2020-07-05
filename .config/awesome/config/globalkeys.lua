@@ -1,5 +1,5 @@
 local awful = require('awful')
-local apps = require('config.apps')
+local apps = require('config.apps').default
 local hotkeys_popup = require('awful.hotkeys_popup').widget
 
 local modkey = require('config.mod').modkey
