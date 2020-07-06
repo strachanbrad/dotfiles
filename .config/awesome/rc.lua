@@ -65,6 +65,7 @@ tag.connect_signal("request::default_layouts", function()
 		local mytaglist = require('widgets.taglist')
 		local mylayoutbox = require('widgets.layoutbox')
 		local batwidget = require('widgets.battery')
+		local netmon = require('widgets.networkmonitor')("wlp3s0")
 
 		s.mywibox = awful.wibar { 
 			position = "top", 
@@ -94,6 +95,7 @@ tag.connect_signal("request::default_layouts", function()
 						wibox.widget {
 							wibox.widget.systray(),
 							--batwidget,
+							netmon,
 							layout = wibox.layout.fixed.horizontal,
 							spacing = beautiful.taglist_power_arrow_spacing
 						},
@@ -118,9 +120,9 @@ tag.connect_signal("request::default_layouts", function()
 				awful.button({ }, 1, function (c)
 					c:activate { context = "mouse_click" }
 				end),
-				awful.button({ modkey }, 1, function (c)
-					c:activate { context = "mouse_click", action = "mouse_move"  }
-				end),
+				--awful.button({ modkey }, 1, function (c)
+				--	c:activate { context = "mouse_click", action = "mouse_move"  }
+				--end),
 				awful.button({ modkey }, 3, function (c)
 					c:activate { context = "mouse_click", action = "mouse_resize"}
 				end),
@@ -128,25 +130,24 @@ tag.connect_signal("request::default_layouts", function()
 		end)
 
 
-	client.connect_signal("manage", function (c)
-		c.shape = function (cr, w, h)
-			gears.shape.rounded_rect(cr, w, h, 5)
-		end
-		if not _G.awesome.startup then
-			awful.client.setslave(c)
-		end
+		client.connect_signal("manage", function (c)
+			c.shape = function (cr, w, h)
+				gears.shape.rounded_rect(cr, w, h, 5)
+			end
+			if not _G.awesome.startup then
+				awful.client.setslave(c)
+			end
 
-		if _G.awesome.startup and not c.size_hints.user_position and not c.size_hints.program_position then
-			-- Prevent clients from being unreachable after screen count changes.
-			awful.placement.no_offscreen(c)
+			if _G.awesome.startup and not c.size_hints.user_position and not c.size_hints.program_position then
+				-- Prevent clients from being unreachable after screen count changes.
+				awful.placement.no_offscreen(c)
+			end
+		end)
+
+		naughty.connect_signal("request::display", function(n)
+			naughty.layout.box { notification = n }
+		end)
+
+		for app = 1, #autostart do
+			awful.util.spawn(autostart[app])
 		end
-	end)
-
-	naughty.connect_signal("request::display", function(n)
-		naughty.layout.box { notification = n }
-	end)
-
-	for app = 1, #autostart do
-		appPIDs[#appPIDs + 1] = awful.util.spawn(autostart[app])
-		naughty.notify({text = appPIDs[#appPIDs + 1]})
-	end
