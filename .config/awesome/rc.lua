@@ -64,7 +64,6 @@ tag.connect_signal("request::default_layouts", function()
 
 		local mytaglist = require('widgets.taglist')
 		local mylayoutbox = require('widgets.layoutbox')
-		local batwidget = require('widgets.battery')
 		local netmon = require('widgets.networkmonitor')("wlp3s0")
 
 		s.mywibox = awful.wibar { 
@@ -101,7 +100,7 @@ tag.connect_signal("request::default_layouts", function()
 						},
 						halign = 'right',
 						fill_horizontal = true,
-						fill_vertical = true,
+						content_fill_vertical = true,
 						widget = wibox.container.place
 					}
 				},

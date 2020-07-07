@@ -43,6 +43,9 @@ theme.taglist_power_arrow_spacing = -8
 
 theme.battery_bg_healthy = "#689d6a"
 theme.battery_bg_warning = "#d65d0e"
+
+theme.netmon_bg_healthy = "#689d6a"
+theme.netmon_bg_warning = "#d65d0e"
 -- There are other variable sets
 -- overriding the default one when
 -- defined, the sets are:
