@@ -13,7 +13,7 @@ function template.new(_id)
 		{
 			{
 				id = _id,
-				markup = _id .. ': 0bit/s',
+				markup = '<b>' .. _id .. '</b>|0bit/s',
 				align  = 'center',
 				valign = 'center',
 				widget = wibox.widget.textbox
@@ -49,7 +49,7 @@ function netmon.new(interface, shape)
 
 		for i, str in pairs(split) do
 
-			widget:get_children_by_id(x[i])[1].markup = "<b>" .. x[i] .. ":</b>" .. str
+			widget:get_children_by_id(x[i])[1].markup = "<b>" .. x[i] .. "|</b>" .. str
 			if tonumber(split[i]:sub(1, 1)) > 0 then
 				widget:get_children_by_id("background_role")[i].bg = beautiful.netmon_bg_warning
 			else	
@@ -65,7 +65,6 @@ function netmon.new(interface, shape)
 		template("rx"),
 		template("tx"),
 		layout   = wibox.layout.fixed.horizontal,
-		fill_space = true,
 		spacing = beautiful.taglist_power_arrow_spacing,
 
 	}) 
