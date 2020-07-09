@@ -33,13 +33,13 @@ theme.fg_minimize   = "#928374"
 theme.useless_gap         = dpi(4)
 theme.border_width        = dpi(2)
 theme.border_color_normal = "#ebdbb2"
-theme.border_color_active = "#b16386"
+theme.border_color_active = "#b16286"
 theme.border_color_marked = "#fb4934"
 
 theme.taglist_bg_occupied = "#928374"
 theme.taglist_power_arrow = "#b57614"
 theme.taglist_bg_hover    = "#fb4934"
-theme.taglist_power_arrow_spacing = -8
+theme.taglist_power_arrow_spacing = -12
 
 theme.battery_bg_healthy = "#689d6a"
 theme.battery_bg_warning = "#d65d0e"

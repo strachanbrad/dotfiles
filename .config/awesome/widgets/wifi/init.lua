@@ -7,26 +7,52 @@ local beautiful = require('beautiful')
 local setmetatable = setmetatable
 
 local wifi = { mt = {} }
+local base_widget = wibox.widget{
+	{
+		{
+			id = "textbox",
+			markup = '<b>?</b>', 
+			align  = 'center',
+			valign = 'center',
+			widget = wibox.widget.textbox
+		},
+		left  = 8,
+		right = 5,
+		widget = wibox.container.margin,
+	},
+	id = "background_role",
+	widget = wibox.container.background,
+	bg = beautiful.taglist_bg_occupied,
+	shape = shape or function(cr, width, height) 
+		gears.shape.rectangular_tag(cr, width, height, height/2)
+	end,
+	buttons = {
+		awful.button({ }, 1, function() naughty.notify({text = "test"}) end)
+	}
+}
 
-function wifi.new(interface)
+local bg_hash = {
+	{-80, beautiful.wifi_bg_bad or "#cc241d"},
+	{-70, beautiful.wifi_bg_fair or "#d65d0e"},
+	{-60, beautiful.wifi_bg_good or "#689d6a"},
+	{-50, beautiful.wifi_bg_excellent or "#458588"},
+}
+
+function wifi.new(interface, screen)
 	local cmd = 'bash -c "iw dev ' .. interface .. ' station dump | awk \'FNR == 12 {print($2)}\'"'
 
-	local widget = wibox.widget{
-		{
-			awful.widget.watch(cmd),
-			right = 5,
-			left = 8,
-			widget = wibox.container.margin
-		},
-		id = "background_role",
-		bg = beautiful.taglist_bg_occupied,
-		widget = wibox.container.background,
-		shape = function (cr, width, height)
-			gears.shape.rectangular_tag(cr, width, height, height/2)
-		end,
-	}
+	return awful.widget.watch(cmd, 15, function(base_widget, stdout)
 
-	return widget
+		base_widget:get_children_by_id('textbox')[1]:set_text(stdout)
+
+		local background = base_widget:get_children_by_id('background_role')[1]
+		local i = 1
+		for _, entry in ipairs(bg_hash) do
+			if tonumber(stdout) >= entry[1] then
+				background.bg = entry[2]
+			end
+		end
+	end, base_widget) 
 end
 
 function wifi.mt.__call(_, ...)
@@ -34,4 +60,3 @@ function wifi.mt.__call(_, ...)
 end
 
 return setmetatable(wifi, wifi.mt)
-
