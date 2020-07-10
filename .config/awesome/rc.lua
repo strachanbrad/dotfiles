@@ -66,7 +66,7 @@ tag.connect_signal("request::default_layouts", function()
 		local mylayoutbox = require('widgets.layoutbox')
 		local battery = require('widgets.battery')
 		local netmon = require('widgets.networkmonitor')("wlp2s0")
-		local wifi = require('widgets.wifi')("wlp2s0")
+		local wifi = require('widgets.wifi')("wlp2s0", s)
 
 		s.mywibox = awful.wibar { 
 			position = "top", 
