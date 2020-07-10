@@ -64,9 +64,8 @@ tag.connect_signal("request::default_layouts", function()
 
 		local mytaglist = require('widgets.taglist')
 		local mylayoutbox = require('widgets.layoutbox')
-		local battery = require('widgets.battery')
-		local netmon = require('widgets.networkmonitor')("wlp2s0")
-		local wifi = require('widgets.wifi')("wlp2s0", s)
+		local netmon = require('widgets.networkmonitor')("wlp3s0")
+		local wifi = require('widgets.wifi')("wlp3s0", s)
 
 		s.mywibox = awful.wibar { 
 			position = "top", 
@@ -96,7 +95,6 @@ tag.connect_signal("request::default_layouts", function()
 						wibox.widget {
 							wibox.widget.systray(),
 							netmon,
-							battery,
 							wifi,
 							layout = wibox.layout.fixed.horizontal,
 							spacing = beautiful.taglist_power_arrow_spacing
