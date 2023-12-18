@@ -1,0 +1,39 @@
+/* gruvbox-dark.rasi */
+
+* {
+    border-radius: 0px 0px 5px 5px; /* Rounded corners at the bottom */
+    font: "sans 12";
+}
+
+window {
+    width: 100%;
+    padding: 5px;
+    border: 0px;
+    location: north; /* Top of the screen */
+}
+
+mainbox {
+    border-radius: 0px 0px 5px 5px; /* Rounded corners at the bottom */
+}
+
+listview {
+    fixed-height: 1; /* Make the list expand */
+}
+
+element {
+    padding: 2px 5px;
+}
+
+element selected {
+    background-color: #fabd2f; /* Gruvbox highlight color */
+}
+
+element normal.normal {
+    background-color: #282828; /* Gruvbox dark background */
+    text-color: #ebdbb2; /* Gruvbox text color */
+}
+
+element alternate.normal {
+    background-color: #3c3836; /* Gruvbox dark alternate background */
+    text-color: #ebdbb2; /* Gruvbox text color */
+}
